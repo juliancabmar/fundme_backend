@@ -1,0 +1,33 @@
+{
+    "language": "Solidity",
+    "sources": {
+        "contracts/Aux.sol": {
+            "content": "// SPDX-License-Identifier: MIT\n// 1. Pragma\npragma solidity ^0.8.8;\n\ncontract Hello {\n    function salute(string memory name) public pure returns (string memory) {\n        return string(abi.encodePacked(\"Hello \", name));\n    }\n}\n"
+        }
+    },
+    "settings": {
+        "optimizer": {
+            "enabled": false,
+            "runs": 200
+        },
+        "outputSelection": {
+            "*": {
+                "*": [
+                    "abi",
+                    "evm.bytecode",
+                    "evm.deployedBytecode",
+                    "evm.methodIdentifiers",
+                    "metadata",
+                    "devdoc",
+                    "userdoc",
+                    "storageLayout",
+                    "evm.gasEstimates"
+                ],
+                "": ["ast"]
+            }
+        },
+        "metadata": {
+            "useLiteralContent": true
+        }
+    }
+}
